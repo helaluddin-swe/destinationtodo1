@@ -11,7 +11,7 @@ const app = express();
 connectDB()
 
 // Middleware
-app.use(cors());
+app.use(cors({origin:'https://helaluddin-swe-todo-ar89.vercel.app',}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
