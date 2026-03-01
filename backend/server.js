@@ -11,7 +11,12 @@ const app = express();
 connectDB()
 
 // Middleware
-app.use(cors({origin:'https://helaluddin-swe-todo-ar89.vercel.app',}));
+app.use(cors({origin:'',}));
+app.use(cors({
+  origin: "https://helaluddin-swe-todo-ar89.vercel.app", 
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
